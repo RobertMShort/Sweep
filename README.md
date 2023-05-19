@@ -21,8 +21,7 @@ Saves full scan output to files for review/records.
 Requirements:
 
 - Must have Nmap installed.
-- Works on Linux 
-- Made for Bash
+- Works on Linux/bash
 
 - This is a work in progress...
 
