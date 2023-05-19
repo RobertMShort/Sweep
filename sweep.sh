@@ -1,4 +1,9 @@
-#!/bin/bash
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+	#!/bin/bash
+	echo "Linux"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+	echo "Mac"
+fi
 
 source banners.sh
 source func.sh
