@@ -17,11 +17,12 @@ Pings the entire network to identify active hosts.
 Performs port scans on active hosts.
 Displays relevant results right in the terminal.
 Saves full scan output to files for review/records. 
+Option to service or aggressive scan specific target after initial scan.
 
 Requirements:
 
 - Must have Nmap installed.
-- Works on Linux/bash
+- Works on Linux & Mac
 
 - This is a work in progress...
 
@@ -32,7 +33,7 @@ Takes private IP network portion and scans automatically.
 
 You can specify a network manually by entering network portion of IP.
 
-Can run a service or aggressive scan at start or after intial default scan.
+Can run a service or aggressive scan at start, or a specific target IP after intial default scan.
 (More scan options to come.)
 
 Examples:
