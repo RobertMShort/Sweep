@@ -1,9 +1,4 @@
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-	#!/bin/bash
-	echo "Linux"
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-	echo "Mac"
-fi
+#!/bin/bash
 
 source banners.sh
 source func.sh
@@ -19,64 +14,66 @@ sweep () {
 		less IPsweep/help.txt
 	elif [ "$1" == "" ] || [ "$1" == "-s" ] || [ "$1" == "-a" ]; then
 		logo
+		detect_OS
 		make_dir
-    	ip=$(ifconfig | awk '/broadcast/ {print $2}' | cut -c 1-9)
-    	scanning_network
-    	ip_for_loop "$ip"
-    	sleep 1
-    	active_hosts
-    	cat IPsweep/ips.txt
-    	printf "\n-Saved to IPsweep/ip.txt\n"
-    	sleep 1
-    	line
-		  scanning_ports
+    		ip=$(ifconfig | awk '/broadcast/ {print $2}' | cut -c 1-9)
+    		scanning_network
+    		ip_for_loop "$ip"
+    		sleep 1
+    		active_hosts
+    		cat IPsweep/ips.txt
+    		printf "\n-Saved to IPsweep/ip.txt\n"
+    		sleep 1
+    		line
+		scanning_ports
 
-		  select_scan "$1"
+		select_scan "$1"
 
-		  active_ports
+		active_ports
 
-		  cat IPsweep/ports.txt
+		cat IPsweep/ports.txt
 
    		printf "\n-Saved to IPsweep/ports.txt\n"
 
-    	echo " " >> IPsweep/ips.txt
-    		date >> IPsweep/ips.txt
+    		echo " " >> IPsweep/ips.txt
+    			date >> IPsweep/ips.txt
 
-		  line
-		  options
+		line
+		options
 
-		  read run
-		  target_scan "$run"
+		read run
+		target_scan "$run"
    	 elif [[ "$1" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
    	 	logo
+		detect_OS
    	 	make_dir
-		  scanning_network
-		  ip_for_loop "$1"
-		  sleep 1
-    	active_hosts
-    	cat IPsweep/ips.txt
-    	printf "\n-Saved to IPsweep/ip.txt\n"
-    	sleep 1
-		  line
-		  scanning_ports
+		scanning_network
+		ip_for_loop "$1"
+		sleep 1
+    		active_hosts
+    		cat IPsweep/ips.txt
+    		printf "\n-Saved to IPsweep/ip.txt\n"
+    		sleep 1
+		line
+		scanning_ports
 
-		  select_scan "$2"
+		select_scan "$2"
 
-		  active_ports
+		active_ports
 
-		  cat IPsweep/ports.txt
+		cat IPsweep/ports.txt
 
    		printf "\n-Saved to IPsweep/ports.txt\n"
 
-    	echo " " >> IPsweep/ips.txt
-    		date >> IPsweep/ips.txt
+    		echo " " >> IPsweep/ips.txt
+    			date >> IPsweep/ips.txt
 
-		  line
-		  options
+		line
+		options
 
-		  read run
+		read run
 
-	    target_scan "$run"
+	    	target_scan "$run"
 	else
 		echo "Not a valid IP"
 	fi
