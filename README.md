@@ -24,8 +24,6 @@ Requirements:
 - Must have Nmap installed.
 - Works on Linux & Mac
 
-- This is a work in progress...
-
 Features:
 
 Will scan your internal network by itself with no switches or input. 
