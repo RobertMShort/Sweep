@@ -54,3 +54,11 @@ target_scan () {
 	fi
 
 }
+
+detect_OS () {
+	if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+		echo " For Linux"
+	elif [[ "$OSTYPE" == "darwin"* ]]; then
+        	echo " For Mac"
+	fi
+}
