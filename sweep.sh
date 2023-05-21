@@ -11,7 +11,7 @@ sweep () {
 	fi
 
 	if [ "$1" == "-h" ]; then
-		less IPsweep/help.txt
+		less ~/Sweep/help.txt
 	elif [ "$1" == "" ] || [ "$1" == "-s" ] || [ "$1" == "-a" ]; then
 		logo
 		detect_OS
@@ -21,8 +21,8 @@ sweep () {
     		ip_for_loop "$ip"
     		sleep 1
     		active_hosts
-    		cat IPsweep/ips.txt
-    		printf "\n-Saved to IPsweep/ip.txt\n"
+    		cat ~/Sweep/ips.txt
+    		printf "\n-Saved to ~/Sweep/ip.txt\n"
     		sleep 1
     		line
 		scanning_ports
@@ -31,12 +31,12 @@ sweep () {
 
 		active_ports
 
-		cat IPsweep/ports.txt
+		cat ~/Sweep/ports.txt
 
-   		printf "\n-Saved to IPsweep/ports.txt\n"
+   		printf "\n-Saved to ~/Sweep/ports.txt\n"
 
-    		echo " " >> IPsweep/ips.txt
-    			date >> IPsweep/ips.txt
+    		echo " " >> ~/Sweep/ips.txt
+    			date >> ~/Sweep/ips.txt
 
 		line
 		options
@@ -51,8 +51,8 @@ sweep () {
 		ip_for_loop "$1"
 		sleep 1
     		active_hosts
-    		cat IPsweep/ips.txt
-    		printf "\n-Saved to IPsweep/ip.txt\n"
+    		cat ~/Sweep/ips.txt
+    		printf "\n-Saved to ~/Sweep/ip.txt\n"
     		sleep 1
 		line
 		scanning_ports
@@ -61,12 +61,12 @@ sweep () {
 
 		active_ports
 
-		cat IPsweep/ports.txt
+		cat ~/Sweep/ports.txt
 
-   		printf "\n-Saved to IPsweep/ports.txt\n"
+   		printf "\n-Saved to ~/Sweep/ports.txt\n"
 
-    		echo " " >> IPsweep/ips.txt
-    			date >> IPsweep/ips.txt
+    		echo " " >> ~/Sweep/ips.txt
+    			date >> ~/Sweep/ips.txt
 
 		line
 		options
