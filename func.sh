@@ -43,7 +43,7 @@ target_scan () {
     	printf "\nEnter Target IP:\n"
     	read target
     	agr_scan
-    	sudo nmap -A -v "$target" > ~/Sweep_Docs/aggressive.txt
+    	sudo nmap -A -v "$target" > Sweep_Docs/aggressive.txt
     	aggressive_info
   		cat Sweep_Docs/aggressive.txt
     	printf "\n-Saved to Sweep_Docs/services.txt\n"
