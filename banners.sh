@@ -1,8 +1,8 @@
 #!/bin/bash
 
 logo () {
-printf "\n"
-cat .logo.txt                                     	 
+    printf "\n"
+    cat .logo.txt                                     	 
 }
 
 line () {
