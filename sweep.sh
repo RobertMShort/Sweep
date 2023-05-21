@@ -21,8 +21,8 @@ sweep () {
     		ip_for_loop "$ip"
     		sleep 1
     		active_hosts
-    		cat ~/Sweep_Docs/ips.txt
-    		printf "\n-Saved to ~/Sweep_Docs/ip.txt\n"
+    		cat Sweep_Docs/ips.txt
+    		printf "\n-Saved to Sweep_Docs/ip.txt\n"
     		sleep 1
     		line
 		scanning_ports
@@ -31,12 +31,12 @@ sweep () {
 
 		active_ports
 
-		cat ~/Sweep_Docs/ports.txt
+		cat Sweep_Docs/ports.txt
 
-   		printf "\n-Saved to ~/Sweep_Docs/ports.txt\n"
+   		printf "\n-Saved to Sweep_Docs/ports.txt\n"
 
-    		echo " " >> ~/Sweep_Docs/ips.txt
-    			date >> ~/Sweep_Docs/ips.txt
+    		echo " " >> Sweep_Docs/ips.txt
+    			date >> Sweep_Docs/ips.txt
 
 		line
 		options
@@ -52,7 +52,7 @@ sweep () {
 		sleep 1
     		active_hosts
     		cat ~/Sweep_Docs/ips.txt
-    		printf "\n-Saved to ~/Sweep_Docs/ip.txt\n"
+    		printf "\n-Saved to Sweep_Docs/ip.txt\n"
     		sleep 1
 		line
 		scanning_ports
@@ -61,12 +61,12 @@ sweep () {
 
 		active_ports
 
-		cat ~/Sweep_Docs/ports.txt
+		cat Sweep_Docs/ports.txt
 
-   		printf "\n-Saved to ~/Sweep_Docs/ports.txt\n"
+   		printf "\n-Saved to Sweep_Docs/ports.txt\n"
 
-    		echo " " >> ~/Sweep_Docs/ips.txt
-    			date >> ~/Sweep_Docs/ips.txt
+    		echo " " >> Sweep_Docs/ips.txt
+    			date >> Sweep_Docs/ips.txt
 
 		line
 		options
