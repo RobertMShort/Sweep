@@ -46,5 +46,5 @@ aggressive_info () {
 }
 
 options () {
-    printf "\nEnter 's' to run service scan on target, \n'a' for aggressive scan, \n'n' to quit: "
+    printf "\nEnter 's' to run service scan on target, \n'a' for aggressive scan, \n'q' to quit: "
 }
