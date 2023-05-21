@@ -2,7 +2,7 @@
 
 logo () {
 printf "\n"
-cat logo.txt                                     	 
+cat .logo.txt                                     	 
 }
 
 line () {
