@@ -7,9 +7,9 @@ exit_sweep () {
 }
 
 make_dir () {
-    if [ ! -d IPsweep ]
+    if [ ! -d /usr/local/bin/Sweep ]
      	then
-    	mkdir IPsweep
+    	mkdir /usr/local/bin/Sweep
     fi
 }
 
