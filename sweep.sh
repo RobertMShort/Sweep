@@ -11,7 +11,7 @@ sweep () {
 	fi
 
 	if [ "$1" == "-h" ]; then
-		less ~/Sweep/help.txt
+		less ~/Documents/Sweep/help.txt
 	elif [ "$1" == "" ] || [ "$1" == "-s" ] || [ "$1" == "-a" ]; then
 		logo
 		detect_OS
