@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-source ~/Documents/Sweep/banners.sh
-source ~/Documents/Sweep/func.sh
+source banners.sh
+source func.sh
 
 sweep () {
 	if ! type nmap > /dev/null; then
