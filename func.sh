@@ -47,7 +47,7 @@ target_scan () {
     	aggressive_info
   		cat ~/Sweep/aggressive.txt
     	printf "\n-Saved to ~/Sweep/services.txt\n"
-	elif [ "$1" == "n" ]; then
+	elif [ "$1" == "q" ]; then
     	exit_sweep
   else
   		echo "Not a valid selection"
