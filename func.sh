@@ -7,25 +7,25 @@ exit_sweep () {
 }
 
 make_dir () {
-    if [ ! -d IPsweep ]
+    if [ ! -d ~/Sweep ]
      	then
-    	mkdir IPsweep
+    	mkdir ~/Sweep
     fi
 }
 
 ip_for_loop () {
     for h in `seq 1 254`; do
          	ping -c 1 $1.$h | grep "64 bytes" | cut -d " " -f 4 | tr -d ":"&
-    	done > IPsweep/ips.txt
+    	done > ~/Sweep/ips.txt
 }
 
 select_scan () {
     if [ "$1" == "" ]; then
-   	  sudo nmap -iL IPsweep/ips.txt > IPsweep/ports.txt
+   	  sudo nmap -iL ~/Sweep/ips.txt > ~/Sweep/ports.txt
 	  elif [ "$1" == "-s" ]; then
-   	  sudo nmap -sV -v -iL IPsweep/ips.txt > IPsweep/ports.txt
+   	  sudo nmap -sV -v -iL ~/Sweep/ips.txt > ~/Sweep/ports.txt
 	  elif [ "$1" == "-a" ]; then
-   	  sudo nmap -A -v -iL IPsweep/ips.txt > IPsweep/ports.txt
+   	  sudo nmap -A -v -iL ~/Sweep/ips.txt > ~/Sweep/ports.txt
 	  fi
 }
 
@@ -34,19 +34,19 @@ target_scan () {
    	  printf "\nEnter Target IP:\n"
   	  read target
     	scanning_services
-    	sudo nmap -sV -v "$target" > IPsweep/services.txt
+    	sudo nmap -sV -v "$target" > ~/Sweep/services.txt
     	service_info
-    	cat IPsweep/services.txt
-    	printf "\n-Saved to IPsweep/services.txt\n"
+    	cat ~/Sweep/services.txt
+    	printf "\n-Saved to ~/Sweep/services.txt\n"
     	line
 	elif [ "$1" == "a" ]; then
     	printf "\nEnter Target IP:\n"
     	read target
     	agr_scan
-    	sudo nmap -A -v "$target" > IPsweep/aggressive.txt
+    	sudo nmap -A -v "$target" > ~/Sweep/aggressive.txt
     	aggressive_info
-  		cat IPsweep/aggressive.txt
-    	printf "\n-Saved to IPsweep/services.txt\n"
+  		cat ~/Sweep/aggressive.txt
+    	printf "\n-Saved to ~/Sweep/services.txt\n"
 	elif [ "$1" == "n" ]; then
     	exit_sweep
   else
