@@ -51,7 +51,7 @@ sweep () {
 		ip_for_loop "$1"
 		sleep 1
     		active_hosts
-    		cat ~/Sweep_Docs/ips.txt
+    		cat Sweep_Docs/ips.txt
     		printf "\n-Saved to Sweep_Docs/ip.txt\n"
     		sleep 1
 		line
