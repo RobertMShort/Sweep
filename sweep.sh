@@ -16,7 +16,7 @@ sweep () {
 		logo
 		detect_OS
 		make_dir
-    		ip=$(ifconfig | awk '/broadcast/ {print $2}' | cut -c 1-9)
+    		ip=$(sudo ifconfig | awk '/broadcast/ {print $2}' | cut -c 1-9)
     		scanning_network
     		ip_for_loop "$ip"
     		sleep 1
