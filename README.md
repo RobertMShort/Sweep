@@ -9,7 +9,6 @@ Ping sweep and port scanner
                                           ███████║╚███╔███╔╝███████╗███████╗██║     
                                           ╚══════╝ ╚══╝╚══╝ ╚══════╝╚══════╝╚═╝ 
 
-HELP
 
 Simple Overview: 
 
